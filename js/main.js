@@ -133,12 +133,12 @@ class Comment {
             this.domOnloader();
     }
     uploadFile(e) {
-        if (!["image/jpeg", "image/png", "image/gif"].includes(e.type)) return alert("Solo se permiten imágenes."), void (formImage.value = "");
-        if (e.size > 1048576) alert("El archivo debe tener menos de 1 MB.");
+        if (!["image/jpeg", "image/png", "image/gif"].includes(e.type)) return alert("Sono ammesse solo immagini."), void (formImage.value = "");
+        if (e.size > 1048576) alert("Il file deve essere inferiore a 1 MB.");
         else {
             var t = new FileReader();
             (t.onload = (e) => {
-                (this.formAvatar.innerHTML = `<img src="${e.target.result}" alt="Фото">`), this.formAvatar.classList.add("form__avatar--loaded"), (this.formImageUrl = e.target.result);
+                (this.formAvatar.innerHTML = `<img src="${e.target.result}" alt="Foto">`), this.formAvatar.classList.add("form__avatar--loaded"), (this.formImageUrl = e.target.result);
             }),
                 (t.onerror = function (e) {
                     alert("Error");
@@ -210,10 +210,10 @@ Comment.prototype.pushComm = function () {
                         </div>
                     </div>
                     <!--<div class="component_img"><img src="selfy/"></div>-->
-                    <div class="component_reposy"><b>Hace un momento</b>
-                        <nav>Me gusta</nav>
-                        <nav>Responder</nav>
-                        <nav>Más</nav>
+                    <div class="component_reposy"><b>di un'ora fa</b>
+                        <nav>Mi piace</nav>
+                        <nav>Rispondere</nav>
+                        <nav>Piu</nav>
                     </div>
                 </div>
             </div>
